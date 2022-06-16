@@ -1,6 +1,7 @@
 let bold = document.querySelector(".bold");
 let italic = document.querySelector(".italic");
 let underline = document.querySelector(".underline");
+let input = document.createElement('input')
 
 bold.addEventListener("click",function(){
     setFontStyle("bold",bold);
@@ -56,15 +57,19 @@ function setFontStyle(styleName,element){
     }
 }
 
-
+let inputColorBool = false
 
 let inputColor =document.querySelector('.inputColor')
 inputColor.addEventListener('click',()=>{
-    let input = document.createElement('input')
-    input.setAttribute('type','color')
-    input.click()
+    inputColorBool = !inputColorBool
+    if(!inputColorBool) innerInput.style.display = "none"
+    
+    let innerInput = document.querySelector('.InputColor')
+    // it is behind input icon
+    innerInput.click()
 
-    input.addEventListener('change',(e)=>{
+
+    innerInput.addEventListener('change',(e)=>{
         // console.log(e.currentTarget.val)
         lastSelectedCell.style.backgroundColor =e.currentTarget.value
     })
