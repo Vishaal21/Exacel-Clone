@@ -40,7 +40,7 @@ function setFontStyle(styleName,element){
             if(styleName == "bold"){
                 bold.style.backgroundColor = "darkgrey"
                 bold.style.borderRadius = "4px"
-                lastSelectedCell.style.fontWeight = "bold";
+                lastSelectedCell.style.fontWeight = "bolder";
                 }
             else if(styleName == "italic"){
                     italic.style.backgroundColor = "darkgrey"
@@ -74,5 +74,31 @@ inputColor.addEventListener('click',()=>{
         lastSelectedCell.style.backgroundColor =e.currentTarget.value
     })
 })
+
+let textColorBool = false
+
+let textColor =document.querySelector('.textColor')
+textColor.addEventListener('click',()=>{
+    textColorBool = !textColorBool
+    if(!textColorBool) TextInput.style.display = "none"
+    
+    let TextInput = document.querySelector('.TextColor')
+    // it is behind input icon
+    TextInput.click()
+
+
+    TextInput.addEventListener('change',(e)=>{
+        // console.log(e.currentTarget.val)
+        lastSelectedCell.style.color =e.currentTarget.value
+    })
+})
+    let FontSize = document.querySelector('.FontSize')
+
+    FontSize.addEventListener('change',(e)=>{
+        // console.log(e.currentTarget.val)
+        console.log(lastSelectedCell)
+        lastSelectedCell.style.fontSize = FontSize.value+"px"
+    })
+
 
 

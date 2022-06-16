@@ -10,15 +10,24 @@
 </head>
 
 <body>
+    <div class="headingExcel">
+        Excel Clone
+    </div>
     <div class="menu-options">
         <div class="font-style">
             <div class="bold"><i class="fa fa-bold"></i></div>
             <div class="italic"><i class="fa fa-italic"></i></div>
             <div class="underline"><i class="fa fa-underline"></i></div>
-            <input type="color" class="InputColor">
+            <div>
+                <input type="color" class="InputColor">
+                <input type="color" class="TextColor">
+                <input type="number" min="0" max="80" class = "FontSize">
+            </div>
         </div>
        
-        <i class="fa-solid fa-palette inputColor"></i>
+        <i class="fa-solid fa-eye-dropper inputColor"> <h6>Color &nbsp Filler</h6></i>
+        <i class="fa-solid fa-eye-dropper textColor"> <h6>Font &nbsp color</h6></i>
+        <i class="fa-solid fa-text-size fontSize"> <h6>Font &nbsp size</h6></i>
     </div>
     <div class="addressContent">
         <input type="text" id = "address" disabled>
