@@ -18,11 +18,22 @@ cellsContentDiv.addEventListener('scroll', function (e) {
 
 for (let i = 0; i < allCells.length; i++) {
     allCells[i].addEventListener('click', function (e) {
+
         let rowId = Number(e.target.getAttribute("rowId"));
         let colId = Number(e.target.getAttribute("colId"));
+
+        lastSelectedCell = e.target;
+        let fontSize =  window.getComputedStyle(lastSelectedCell,null).getPropertyValue('font-size')
+        FontSize.value =Number( fontSize.split('px')[0])
+        // console.log(FontSize,Number(fontSize.split('px')[0]))
+        let leftColCell = document.querySelectorAll('.leftColCell');
+        leftColCell[rowId].style.height  = FontSize.value + leftColCell[rowId].style.minHeight + "px"; 
+       
+        
         let address = String.fromCharCode(65 + colId) + (rowId + 1) + "";
         let cellObject = db[rowId][colId]
 
+        
         addressInput.value = address;
         formulaInput.value = cellObject.formula
 
@@ -55,6 +66,10 @@ for (let i = 0; i < allCells.length; i++) {
 
 
     })
+
+ 
+
+    
     allCells[i].addEventListener('blur', function (e) {
         lastSelectedCell = e.target
         let cellValue = e.target.textContent;
@@ -63,7 +78,9 @@ for (let i = 0; i < allCells.length; i++) {
         if (cellObject.value == cellValue) {
             return
         }
-        cellObject.value = cellValue;
+      
+      console.log('------------')
+      cellObject.value = cellValue;
         console.log('After Update', cellObject)
         updateChildren(cellObject);
 

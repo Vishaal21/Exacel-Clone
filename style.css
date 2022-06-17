@@ -54,10 +54,11 @@ color: black;
 .cell{
     border: 0.2px solid var(--border-color);
     min-height: 20px;
-    width: 100px;
+    min-width: 100px;
     outline: none;
     background-color: aliceblue;
     padding: 2px;
+    /* font-size: 12px; */
 }
 #formula{
     width: 100%;
@@ -106,7 +107,7 @@ color: black;
 }
 
 .leftColCell{
-    height: 20px;
+    min-height: 23.3px;
     width: 30px;
     border-bottom: 1px solid var(--border-color);
     display: flex;
@@ -199,7 +200,7 @@ font-size: 0.9rem;
 
 .inputColor:hover, .textColor:hover, .inputColor h6:hover{
     cursor: pointer;
-    text-shadow: 0 0 .65px rgb(241, 0, 0), 0 0 .65px rgb(96, 24, 24);;
+    text-shadow: 0 0 .65px rgb(241, 0, 0), 0 0 .65px rgb(96, 24, 24);
 }
 
 .inputColor h6{
@@ -237,7 +238,12 @@ font-size: 0.9rem;
 }
 
 .fontSize{
-    margin-left: 8rem;
+    margin-left: 8rem; 
+}
+
+.fontSize:hover{
+    cursor: pointer;
+    text-shadow: 0 0 .65px rgb(241, 0, 0), 0 0 .65px rgb(96, 24, 24);
 }
 
 .textColor h6{
@@ -257,7 +263,7 @@ font-size: 0.9rem;
     margin-left: 32rem;
     width: 2.4rem;
     height: 17px !important;
-    padding: 5px;
+    padding: 8px;
     font-size: small;
     font-weight: 700;
     border-color: rgb(0, 18, 122);

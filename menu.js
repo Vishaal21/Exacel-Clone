@@ -96,8 +96,9 @@ textColor.addEventListener('click',()=>{
 
     FontSize.addEventListener('change',(e)=>{
         // console.log(e.currentTarget.val)
-        console.log(lastSelectedCell)
+        // console.log(lastSelectedCell)
         lastSelectedCell.style.fontSize = FontSize.value+"px"
+        
     })
 
 
