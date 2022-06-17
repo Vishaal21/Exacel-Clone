@@ -9,6 +9,7 @@
     box-sizing: border-box;
 }
 
+
 .menu-options{
     border: 0.5px solid var(--border-color);
     height: 20px;
@@ -190,7 +191,7 @@ color: black;
 .inputColor, .textColor{  
     font-size: smaller;
     margin-left: 0.5rem;
-    content: "asdasdasdasdasd";
+    /* content: "asdasdasdasdasd"; */
 }
 
 .inputColor:hover, .textColor:hover{
@@ -205,7 +206,7 @@ font-size: 0.9rem;
 
 .inputColor h6{
     position: absolute;
-    top: 1.6rem;
+    top: 2.7rem;
     left: 11rem;
     
 }
@@ -225,9 +226,10 @@ font-size: 0.9rem;
 }
 
 .headingExcel{
-    height: 20px;
-    background-color: darkblue;
-    color: yellow;
+    height: 25px;
+    margin-bottom: 1%;
+    background-color: #5f29fd;
+    color: white;
     font-weight: 900;
     display: flex;
     justify-content: center;
@@ -239,16 +241,18 @@ font-size: 0.9rem;
 
 .fontSize{
     margin-left: 8rem; 
+    font-size: 0.85rem;
 }
 
 .fontSize:hover{
     cursor: pointer;
     text-shadow: 0 0 .65px rgb(241, 0, 0), 0 0 .65px rgb(96, 24, 24);
+    font-size: 0.9rem;
 }
 
 .textColor h6{
     position: absolute;
-    top: 1.6rem;
+    top: 2.7rem;
     left: 17.8rem;
 }
 
@@ -266,6 +270,46 @@ font-size: 0.9rem;
     padding: 8px;
     font-size: small;
     font-weight: 700;
-    border-color: rgb(0, 18, 122);
-    border-radius: 2vh;
+    /* border-color: rgb(0, 18, 122); */
+    /* border-radius: 2vh;   */
+    border-style:inherit;
+    border-radius: 8px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    border-color:blue;
+    border-width: medium;
+
 }
+
+/* CSS */
+
+.option{
+    color: black;
+    font-weight: 600;
+    background-color: white;
+    outline: none;
+    border: none;
+}
+#lock{
+    position: absolute;
+    font-size: 0.75rem;
+    left: 30.5rem;
+    height: 3.2%;
+    border: none;
+    outline: none;
+    background-color: white;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;
+    /* font-family: "Font Awesome 6 Free"; */
+    text-align: center;
+    text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+    }
+
+#lock:hover {
+    cursor: pointer;
+    text-shadow: 0 0 .65px rgb(241, 0, 0), 0 0 .65px rgb(96, 24, 24);
+    font-size: 0.85rem;
+}
+
+

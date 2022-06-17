@@ -101,5 +101,17 @@ textColor.addEventListener('click',()=>{
         
     })
 
+let cell = document.querySelector(".cell")
+let lock = document.querySelector('#lock')
+console.log(lock.value)
 
-
+lock.addEventListener('click',()=>{
+    for (let i = 0; i<allCells.length; i++){
+        if(lock.value == "View Only"){
+            allCells[i].setAttribute("contentEditable","false")
+        }
+        else{
+            allCells[i].setAttribute("contenteditable","true")
+        }
+    }
+})
