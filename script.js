@@ -120,5 +120,6 @@ formulaInput.addEventListener("blur", function (e) {
         // update ui 
         lastSelectedCell.textContent = computedValue
         updateChildren(cellObject)
+        initDB();
     }
 })
